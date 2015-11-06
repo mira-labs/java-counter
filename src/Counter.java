@@ -11,7 +11,7 @@ public class Counter {
 
         double sum = 0;
 
-        File myFile = new File("numbers.txt");
+        File myFile = new File("Sal.txt");
         Scanner scan = new Scanner(myFile);
 
         while (scan.hasNextDouble()) {
