@@ -8,21 +8,18 @@ import java.util.Scanner;
 
 public class Counter {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner input = null;
+
         double sum = 0;
 
-            File file = new File("numbers.txt");
-            //This is the entire logic - not using arrays
-            input = new Scanner(file);
+        File myFile = new File("numbers.txt");
+        Scanner scan = new Scanner(myFile);
 
-            while (input.hasNextDouble()) {
-                sum += input.nextDouble();
-            }
-            // output results in the correct way
-            System.out.printf("The total sum of the "
-                    + "doubles in the input file is %f\n", sum);
+        while (scan.hasNextDouble()) {
+            sum += scan.nextDouble();
+        }
+
+        // output results in the correct way
+        System.out.print("The total sum of is " + sum);
 
     }
-
-
 }
